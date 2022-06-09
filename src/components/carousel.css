@@ -39,22 +39,22 @@
     margin: 10px;
 }
 
-.thumbnail-item {
+.o-carousel--thumbnail {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 100px;
 }
 
+.o-carousel--thumbnail img {
+    max-width: 150px;
+    padding: 2px;
+}
+
 .active-thumbnail {
     border-style: solid;
     border-color: red;
     border-width: 5px;  
-}
-
-.thumbnail-item img {
-    max-width: 150px;
-    padding: 2px;
 }
 
 .o-carousel {
