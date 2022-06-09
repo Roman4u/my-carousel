@@ -1,0 +1,77 @@
+.carousel-wrapper {
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.text-column {
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 5px 10px lightgray;
+}
+
+.text {
+    text-align: left;
+}
+
+.carousel-column {
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.thumbnail-column {
+    height: 100%;
+    padding: 5px;
+    margin: 10px;
+}
+
+.thumbnail-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.active-thumbnail {
+    border-style: solid;
+    border-color: red;
+    border-width: 5px;  
+}
+
+.thumbnail-item img {
+    max-width: 150px;
+    padding: 2px;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.7s;  
+}
+
+
+.indicators {
+    display: flex;
+    justify-content:right;
+}
+
+.indicators > button {
+    margin: 5px;
+}
