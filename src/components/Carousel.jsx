@@ -3,7 +3,7 @@ import "./carousel.css"
 
 
 const Carousel = (props) => {
-    const { carouselImages, transitionTime, activeIndex,setActiveIndex } = props;
+    const { carouselImages, transitionTime, activeIndex, setActiveIndex } = props;
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -30,20 +30,20 @@ const Carousel = (props) => {
         <>
             <div className="o-carousel">
                 <div className="o-carousel--item inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
-                   {carouselImages.map(({image, text}, index) => {
-                       const test = !activeIndex ? `` : `o-carousel--item`;
-
+                   {carouselImages.map(({image, text}, index) => { 
+                        const test = activeIndex ? "" : "hidden";
                        return (
                              <img 
                              src={image}
                              key={index} 
                              style={{width: "100%", height: "100%"}}
                              alt={text}
-                             className={test}
+                            //  className={test}
                              />
                         );  
                    })}
                 </div>
+
                 <div className="o-carousel--caption row">
                 {/* will display text */}
                     <div className="o-carousel--caption--text column">
