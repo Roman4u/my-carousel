@@ -10,27 +10,27 @@ const App = () => {
 
     const images = [{
             image: "https://i.imgur.com/R4HUAOG.jpg",
-            text: "First slide text",
+            text: "Innovative design that offers a variety of amenities",
         }, 
         {
             image: "https://i.imgur.com/9TgoRWD.jpg",
-            text: "Second slide text",
+            text: "Spacious offices with clean design",
         }, 
         {
             image: "https://i.imgur.com/ujZRv5G.jpg",
-            text: "Third slide text"
+            text: "Rooms for storage"
         }, 
         {
             image: "https://i.imgur.com/dWH1QiY.jpg",
-            text: "Fourth slide text",
+            text: "An open space for in-house events and seminars.",
         }, 
         {
             image: "https://i.imgur.com/Lp7J7YK.jpg", 
-            text: "Fifth slide text"
+            text: "Casual spaces to relax and wind down"
         }, 
         {
             image: "https://i.imgur.com/3V3WVvH.jpg",
-            text: "Sixth slide text"
+            text: "In house spaces to meet with clients after work"
         },
     ];
 

@@ -57,11 +57,16 @@
     padding: 2px;
 }
 
-.carousel {
+.o-carousel {
     overflow: hidden;
 }
 
+/* .o-carousel--item {
+    display: none;
+} */
+
 .inner {
+    /* display: none; */
     white-space: nowrap;
     transition: transform 0.7s;  
 }

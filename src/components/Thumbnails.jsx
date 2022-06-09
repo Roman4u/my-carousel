@@ -1,6 +1,4 @@
-import { toHaveClass } from "@testing-library/jest-dom/dist/matchers";
 import React from "react";
-import { act } from "react-dom/test-utils";
 import './carousel.css';
 
 const Thumbnails = (props) => {
@@ -11,7 +9,7 @@ const Thumbnails = (props) => {
     return (
         <div className="thumbnail-item" > 
             {
-                thumbnails.map((image, index) => {
+                thumbnails.map(({ image, text }, index) => {
                     const isActive = index === activeIndex ? `active-thumbnail` : '';
 
                    return(
@@ -20,7 +18,8 @@ const Thumbnails = (props) => {
                         setActiveIndex(index)
                         }}
                         key={index} 
-                        src={image.image} 
+                        src={image}
+                        alt={text} 
                         className={`${isActive}`}   
                     />
                    )

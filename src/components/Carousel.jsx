@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./carousel.css"
 
 
 const Carousel = (props) => {
     const { carouselImages, transitionTime, activeIndex,setActiveIndex } = props;
-
-    // const [imageText, setImageText] = useState("");
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -26,24 +24,27 @@ const Carousel = (props) => {
             newIndex = 0;
         }
         setActiveIndex(newIndex);
-    }
+    };
 
     return(
         <>
-            <div className="carousel">
-                <div className="inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
+            <div className="o-carousel">
+                <div className="o-carousel--item inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
                    {carouselImages.map(({image, text}, index) => {
+                       const test = !activeIndex ? `` : `o-carousel--item`;
+
                        return (
                              <img 
                              src={image}
                              key={index} 
                              style={{width: "100%", height: "100%"}}
-                             alt={`${text}`}
+                             alt={text}
+                             className={test}
                              />
                         );  
                    })}
                 </div>
-                <div className="row">
+                <div className="o-carousel--caption row">
                 {/* will display text */}
                     <div className="o-carousel--caption--text column">
                         {carouselImages[activeIndex].text}
@@ -55,12 +56,12 @@ const Carousel = (props) => {
                 </div>
                     
                     <div className="indicators">
-                        <button onClick={() => {
+                        <button className="o-carousel--prev" onClick={() => {
                             updateIndex(activeIndex - 1);
                         }} >
                             Prev
                         </button>
-                        <button onClick={() => {
+                        <button className="o-carousel--next" onClick={() => {
                             updateIndex(activeIndex + 1)
                         }}>
                             Next
