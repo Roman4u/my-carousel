@@ -19,11 +19,13 @@ const Carousel = (props) => {
         };
     });
 
-    // updates the value of activeIndex when a button is pushed
+    // updates the value of activeIndex upon a button press
     const updateIndex = (newIndex) => {
         if(newIndex < 0){
+            //when it's at the start of the array go to the last index position
             newIndex = carouselImages.length - 1;
         } else if(newIndex >= carouselImages.length){
+            //when it's at the end of the array go to the first index position
             newIndex = 0;
         }
         setActiveIndex(newIndex);
@@ -33,15 +35,17 @@ const Carousel = (props) => {
         <>
             <div className="o-carousel">
                 <div className="o-carousel--item inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
-                   {carouselImages.map(({image, text}, index) => { 
-                        // const test = activeIndex ? "" : "hidden";
+                   {carouselImages.map(({ image, text }, index) => { 
                        return (
                              <img 
                              src={image}
                              key={index} 
-                             style={{width: "100%", height: "100%"}}
+                             style={{
+                                width: "100%", 
+                                height: "100%", 
+                                // display: index === activeIndex ? 'block' : 'none',
+                            }}
                              alt={text}
-                            //  className={test}
                              />
                         );  
                    })}
@@ -58,20 +62,7 @@ const Carousel = (props) => {
                     </div>
                 </div>
 
-                <Buttons updateIndex={updateIndex} activeIndex={activeIndex} />
-                    
-                    {/* <div className="indicators">
-                        <button className="o-carousel--prev text" onClick={() => {
-                            updateIndex(activeIndex - 1);
-                        }} >
-                            Prev
-                        </button>
-                        <button className="o-carousel--next text" onClick={() => {
-                            updateIndex(activeIndex + 1)
-                        }}>
-                            Next
-                        </button>
-                    </div> */}
+                <Buttons updateIndex={updateIndex} activeIndex={activeIndex} />     
             </div>
         </>
     )

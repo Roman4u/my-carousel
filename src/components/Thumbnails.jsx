@@ -20,7 +20,7 @@ const Thumbnails = (props) => {
                         key={index} 
                         src={image}
                         alt={text} 
-                        className={`${isActive}`}   
+                        className={isActive}   
                     />
                    )
                 })

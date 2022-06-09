@@ -31,7 +31,6 @@
 .carousel-column {
     height: 100%;
     padding: 10px;
-    /* margin: 1px; */
 }
 
 .thumbnail-column {
@@ -63,12 +62,7 @@
     overflow: hidden;
 }
 
-/* .hidden{
-    display: none;
-} */
-
 .inner {
-    /* display: none; */
     white-space: nowrap;
     transition: transform 0.7s;  
 }
