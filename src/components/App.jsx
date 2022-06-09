@@ -60,14 +60,12 @@ const App = () => {
 
                     <div className="column">
                         <div className="carousel-column">
-                            <div className="carousel">
                                 <Carousel 
                                 carouselImages={images}
                                 transitionTime={transitionTime}
                                 activeIndex={activeIndex} 
                                 setActiveIndex={setActiveIndex}
                                 />
-                            </div>
                         </div>   
                     </div>
                 </div>

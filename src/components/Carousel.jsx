@@ -43,22 +43,29 @@ const Carousel = (props) => {
                         );  
                    })}
                 </div>
-                <div className="o-carousel--caption--text">
-                    {carouselImages[activeIndex].text}
+                <div className="row">
+                {/* will display text */}
+                    <div className="o-carousel--caption--text column">
+                        {carouselImages[activeIndex].text}
+                    </div>
+
+                    <div className="carousel--caption--pagenumber column">
+                        {`${activeIndex + 1} / ${carouselImages.length}`}
+                    </div>
                 </div>
-                
-                <div className="indicators">
-                    <button onClick={() => {
-                        updateIndex(activeIndex - 1);
-                    }} >
-                        Prev
-                    </button>
-                    <button onClick={() => {
-                        updateIndex(activeIndex + 1)
-                    }}>
-                        Next
-                    </button>
-                </div>
+                    
+                    <div className="indicators">
+                        <button onClick={() => {
+                            updateIndex(activeIndex - 1);
+                        }} >
+                            Prev
+                        </button>
+                        <button onClick={() => {
+                            updateIndex(activeIndex + 1)
+                        }}>
+                            Next
+                        </button>
+                    </div>
             </div>
         </>
     )
