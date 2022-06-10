@@ -23,8 +23,15 @@
     box-shadow: 5px 10px lightgray;
 }
 
+.header-text{
+    text-align: left;
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .text {
     text-align: left;
+    font-size: small;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -74,8 +81,9 @@
 .indicators {
     display: flex;
     justify-content:right;
+    margin: 5px;
 }
 
 .indicators > button {
-    margin: 5px;
+    margin: 2px;
 }

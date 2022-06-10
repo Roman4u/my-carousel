@@ -46,13 +46,13 @@ const App = () => {
                 <div className="row">
                     <div className="column">
                         <div className="text-column">
-                            <h2 className="text">
+                            <h2 className="header-text">
                                 {header}
                             </h2>
-                            <p className="text">
+                            <p className="header-text">
                                 {firstParagraph}
                             </p>
-                            <p className="text">
+                            <p className="header-text">
                                 {secondParagraph}
                             </p>
                         </div>
