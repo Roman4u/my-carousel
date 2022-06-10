@@ -7,7 +7,7 @@ const Thumbnails = (props) => {
     //if activeIndex === index then that image should display a border
 
     return (
-        <div className="o-carousel--thumbnail" > 
+        <div className="o-carousel--item" > 
             {
                 thumbnails.map(({ image, text }, index) => {
                     const isActive = index === activeIndex ? `active-thumbnail` : '';

@@ -39,14 +39,14 @@
     margin: 10px;
 }
 
-.o-carousel--thumbnail {
+.o-carousel--item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 100px;
 }
 
-.o-carousel--thumbnail img {
+.o-carousel--item img {
     max-width: 150px;
     padding: 2px;
     cursor: pointer;

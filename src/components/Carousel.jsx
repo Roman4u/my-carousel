@@ -34,9 +34,10 @@ const Carousel = (props) => {
     return(
         <>
             <div className="o-carousel">
-                <div className="o-carousel--item inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
+                <div className="o-carousel--thumbnail inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
                    {carouselImages.map(({ image, text }, index) => { 
                        return (
+                           <>
                              <img 
                              src={image}
                              key={index} 
@@ -47,6 +48,7 @@ const Carousel = (props) => {
                             }}
                              alt={text}
                              />
+                            </>
                         );  
                    })}
                 </div>
@@ -69,3 +71,11 @@ const Carousel = (props) => {
 }
 
 export default Carousel;
+
+// Selected Framework(s):
+// - I chose to design the carousel using React because:
+//   1. organization: Laying out the various components, and their functionality, made it easier to conceptualize what I would need to implement so that data could move smoothly amongst them
+//   2. managing data: since there would be a lot of data that would need to be passed and updated between/within functions(e.g. depending on which image is being displayed), I felt it would be more efficient to use state management in React. 
+
+// Presentation Logic:
+// - my main focus was being able to access and assign a value to the image that is currently being displayed in the carousel. For example, by assigning a value to a variable, such as isActive, it would allow me to implement the basic functionality of a carousel and it would also make it possible to pass data(as state) to another component, such as the component whose functionality it is to add a border to the thumbnail that is currently being displayed. Furthermore, it would also allow me to have functionality that automatically switches images over a set period of time as well as implement the functionality of the buttons. Hence why this was my main focus.
