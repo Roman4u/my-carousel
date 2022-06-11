@@ -39,14 +39,15 @@
     margin: 10px;
 }
 
-.o-carousel--item {
+
+.o-carousel--thumbnail {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 100px;
 }
 
-.o-carousel--item img {
+.o-carousel--thumbnail img {
     max-width: 150px;
     padding: 2px;
     cursor: pointer;
@@ -58,17 +59,26 @@
     border-width: 5px;  
 }
 
-.o-carousel {
+.outer {
     overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
 .inner {
-    white-space: nowrap;
-    transition: transform 0.7s;  
+    position: relative;
+    min-width: 100%;
+    height: 80%;
+    transition: transform 0.5s; 
+    overflow: hidden; 
 }
 
-.carousel--caption--pagenumber {
-    text-align: right;
+.carousel--caption-pagenumber {
+  text-align: right;
 }
 
 .indicators {
@@ -77,5 +87,6 @@
 }
 
 .indicators > button {
+    display: flex;
     margin: 5px;
 }
