@@ -6,11 +6,12 @@ const Buttons = (props) => {
 
     return (
         <div className="indicators">
-            <button className="o-carousel--prev text" onClick={() => {
+            <button className="o-carousel--prev text buttons" onClick={() => {
                 updateIndex(activeIndex - 1);
                 }} >
                 Prev
              </button>
+
             <button className="o-carousel--next text" onClick={() => {
                 updateIndex(activeIndex + 1)
                 }}>
