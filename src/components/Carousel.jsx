@@ -44,6 +44,7 @@ const Carousel = (props) => {
                                 style={{
                                     width: 100 + "%", 
                                     height: "auto",
+                                    display: index === activeIndex ? "block" : "none",
                                 }}
                                 alt={text}
                                 />
