@@ -11,10 +11,11 @@ const Thumbnails = (props) => {
                     const isActive = index === activeIndex ? `active-thumbnail` : '';
 
                    return(
-                    <div className="o-carousel--thumbnail"> 
+                    <div className="o-carousel--thumbnail" key={index}> 
                         <img
                             onClick={() => {
                             setActiveIndex(index)
+                            console.log(image)
                             }}
                             key={index} 
                             src={image}

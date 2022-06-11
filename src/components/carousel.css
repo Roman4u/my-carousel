@@ -80,8 +80,17 @@
     overflow: hidden;
 }
 
+.carousel--caption-text {
+    display: flex;
+    text-align: left;
+}
+
+.o-carousel--caption {
+    justify-content: left;
+}
+
 .carousel--caption-pagenumber {
-  text-align: right;
+    text-align: right;
 }
 
 .indicators {
