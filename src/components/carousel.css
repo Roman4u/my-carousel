@@ -39,6 +39,7 @@
     margin: 10px;
 }
 
+
 .o-carousel--thumbnail {
     display: inline-flex;
     align-items: center;
@@ -58,12 +59,10 @@
     border-width: 5px;  
 }
 
-.o-carousel {
+.outer {
     overflow: hidden;
-    border: 1px solid red;
     position: relative;
     width: 100%;
-    /* height: 100vh; */
     margin: 0;
     padding: 0;
     display: flex;
@@ -72,15 +71,14 @@
 
 .inner {
     position: relative;
-    border: 1px solid blue;
     min-width: 100%;
-    /* height: 80%; */
+    height: 80%;
     transition: transform 0.5s; 
     overflow: hidden; 
 }
 
-.carousel--caption--pagenumber {
-    text-align: right;
+.carousel--caption-pagenumber {
+  text-align: right;
 }
 
 .indicators {
@@ -89,15 +87,16 @@
 }
 
 .indicators > button {
-    /* display: flex;
-    margin: 5px; */
-}
-
-.buttons {
     display: flex;
     margin: 5px;
+}
+
+/* .buttons {
+    display: flex;
     position: absolute;
     width: 100%;
     height: 80%;
     border: none;
-}
+    background: none;
+    outline: none;
+} */

@@ -35,34 +35,36 @@ const Carousel = (props) => {
 
     return(
         <>
-            < div className="o-carousel">
+            <div div className="o-carousel outer">
                    {carouselImages.map(({ image, text }, index) => { 
                        return (
                            <div className="o-carousel--item inner" key={index} style={{transform: `translateX(-${activeIndex * 100}%)`}}>
-                             <img 
-                             src={image}
-                             style={{
-                                width: 100 + "%", 
-                                height: "auto",
-                            }}
-                             alt={text}
-                             />
+                                <img 
+                                src={image}
+                                style={{
+                                    width: 100 + "%", 
+                                    height: "auto",
+                                }}
+                                alt={text}
+                                />
                             </div>
                         );  
                    })}
+            </div>
 
                 <div className="o-carousel--caption row">
                     {/* will display image text */}
                     <div className="o-carousel--caption-text column text">
                         {carouselImages[activeIndex].text}
                     </div>
+                
                     {/* will display image number */}
                     <div className="carousel--caption-pagenumber column text">
                         {`${activeIndex + 1} / ${carouselImages.length}`}
+                        <Buttons updateIndex={updateIndex} activeIndex={activeIndex} /> 
                     </div>
-                </div>
-
-                <Buttons updateIndex={updateIndex} activeIndex={activeIndex} />     
+                   
+   
             </div>
         </>
     )
