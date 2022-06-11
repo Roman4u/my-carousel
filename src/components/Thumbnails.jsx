@@ -5,21 +5,23 @@ const Thumbnails = (props) => {
     const { thumbnails, setActiveIndex, activeIndex } = props;
 
     return (
-        <div className="o-carousel--thumbnail" > 
+        <div className="thumbnails" > 
             {
                 thumbnails.map(({ image, text }, index) => {
                     const isActive = index === activeIndex ? `active-thumbnail` : '';
 
                    return(
-                     <img
-                        onClick={() => {
-                        setActiveIndex(index)
-                        }}
-                        key={index} 
-                        src={image}
-                        alt={text} 
-                        className={isActive}   
-                    />
+                    <div className="o-carousel--thumbnail"> 
+                        <img
+                            onClick={() => {
+                            setActiveIndex(index)
+                            }}
+                            key={index} 
+                            src={image}
+                            alt={text} 
+                            className={isActive}   
+                        />
+                    </div>
                    )
                 })
             }
