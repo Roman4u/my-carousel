@@ -23,9 +23,11 @@ const Carousel = (props) => {
     const updateIndex = (newIndex) => {
         if(newIndex < 0){
             //when it's at the start of the array go to the last index position
+            // <Prev> button </Prev>
             newIndex = carouselImages.length - 1;
         } else if(newIndex >= carouselImages.length){
             //when it's at the end of the array go to the first index position
+            // <Next> button </Next>
             newIndex = 0;
         }
         setActiveIndex(newIndex);
@@ -33,41 +35,40 @@ const Carousel = (props) => {
 
     return(
         <>
-            <div className="o-carousel">
-                <div className="o-carousel--thumbnail inner" style={{transform: `translateX(-${activeIndex * 100}%)`}} >
+            <div div className="o-carousel outer">
                    {carouselImages.map(({ image, text }, index) => { 
                        return (
-                           <>
-                             <img 
-                             src={image}
-                             key={index} 
-                             style={{
-                                width: "100%", 
-                                height: "100%", 
-                                // display: index === activeIndex ? 'block' : 'none',
-                            }}
-                             alt={text}
-                             />
-                            </>
+                           <div className="o-carousel--item inner" key={index} style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                                <img 
+                                src={image}
+                                style={{
+                                    width: 100 + "%", 
+                                    height: "auto",
+                                }}
+                                alt={text}
+                                />
+                            </div>
                         );  
                    })}
-                </div>
+            </div>
 
                 <div className="o-carousel--caption row">
-                {/* will display text */}
-                    <div className="o-carousel--caption--text column text">
+                    {/* will display image text */}
+                    <div className="o-carousel--caption-text column text">
                         {carouselImages[activeIndex].text}
                     </div>
-
-                    <div className="carousel--caption--pagenumber column text">
+                
+                    {/* will display image number */}
+                    <div className="carousel--caption-pagenumber column text">
                         {`${activeIndex + 1} / ${carouselImages.length}`}
+                        <Buttons updateIndex={updateIndex} activeIndex={activeIndex} /> 
                     </div>
-                </div>
-
-                <Buttons updateIndex={updateIndex} activeIndex={activeIndex} />     
+                   
+   
             </div>
         </>
     )
 }
 
 export default Carousel;
+
