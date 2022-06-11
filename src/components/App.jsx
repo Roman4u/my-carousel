@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./carousel.css"
 import Carousel from "./Carousel";
 import Thumbnails from "./Thumbnails";
-import Buttons from "./Buttons";
 
 
 
