@@ -3,8 +3,6 @@ import './carousel.css';
 
 const Thumbnails = (props) => {
     const { thumbnails, setActiveIndex, activeIndex } = props;
-    
-    //if activeIndex === index then that image should display a border
 
     return (
         <div className="o-carousel--thumbnail" > 
