@@ -7,17 +7,17 @@ const Carousel = (props) => {
     const { carouselImages, transitionTime, activeIndex, setActiveIndex } = props;
 
     // automatically switches images upon loading
-    useEffect(() => {
-        const interval = setInterval(() => {
-            updateIndex(activeIndex + 1);
-        }, transitionTime);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         updateIndex(activeIndex + 1);
+    //     }, transitionTime);
 
-        return () => {
-            if(interval){
-                clearInterval(interval);
-            }
-        };
-    });
+    //     return () => {
+    //         if(interval){
+    //             clearInterval(interval);
+    //         }
+    //     };
+    // });
 
     // updates the value of activeIndex upon a button press
     const updateIndex = (newIndex) => {
@@ -41,8 +41,10 @@ const Carousel = (props) => {
                        return (
                            <>
                            <p className="o-carousel--item inner" 
-                           key={index} 
-                           style={{transform: `translateX(-${activeIndex * 100}%)`}}
+                            key={index} 
+                           style={{
+                               transform: `translateX(-${activeIndex * 100}%)`,
+                            }}
                            >
                                 <img 
                                 src={image}
@@ -60,28 +62,6 @@ const Carousel = (props) => {
                    })}
             </div>
 
-            {/* return(
-        <>
-            <div div className="o-carousel outer">
-                   {carouselImages.map(({ image, text }, index) => { 
-                       return (
-                           <div 
-                           className="o-carousel--item inner" 
-                           key={index} 
-                        //    style={{transform: `translateX(-${activeIndex * 100}%)`}}
-                           >
-                                <img 
-                                src={carouselImages[activeIndex].image}
-                                style={{
-                                    width: 100 + "%", 
-                                    height: "auto",
-                                }}
-                                alt={text}
-                                />
-                            </div>
-                        );  
-                   })}
-            </div> */}
 
 
              <div className="o-carousel--caption row">
@@ -110,7 +90,7 @@ const Carousel = (props) => {
                     {/* will display image number */}
                     <div className="carousel--caption-pagenumber column text">
                         {`${activeIndex + 1} / ${carouselImages.length}`}
-                        <Buttons updateIndex={updateIndex} activeIndex={activeIndex} /> 
+                        <Buttons updateIndex={updateIndex} activeIndex={activeIndex} carouselImages={carouselImages} /> 
                     </div>
                    
    

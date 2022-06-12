@@ -15,7 +15,6 @@ const Thumbnails = (props) => {
                         <img
                             onClick={() => {
                             setActiveIndex(index)
-                            console.log(image)
                             }}
                             key={index} 
                             src={image}

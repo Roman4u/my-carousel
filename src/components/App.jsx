@@ -8,10 +8,7 @@ import Thumbnails from "./Thumbnails";
 const App = () => {
     const [ activeIndex, setActiveIndex] = useState(0);
 
-    const images = [{
-            image: "https://i.imgur.com/R4HUAOG.jpg",
-            text: "Innovative design that offers a variety of amenities",
-        }, 
+    const images = [ 
         {
             image: "https://i.imgur.com/9TgoRWD.jpg",
             text: "Spacious offices with clean design",
@@ -31,6 +28,10 @@ const App = () => {
         {
             image: "https://i.imgur.com/3V3WVvH.jpg",
             text: "In house spaces to meet with clients after work"
+        },
+        {
+            image: "https://i.imgur.com/R4HUAOG.jpg",
+            text: "Innovative design that offers a variety of amenities",
         },
     ];
 
