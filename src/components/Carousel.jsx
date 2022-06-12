@@ -41,6 +41,7 @@ const Carousel = (props) => {
                            <div 
                            className="o-carousel--item inner" 
                            key={index} 
+                           style={{display: index === activeIndex ? "block" : "none"}}
                         //    style={{transform: `translateX(-${activeIndex * 100}%)`}}
                            >
                                 <img 
@@ -48,6 +49,7 @@ const Carousel = (props) => {
                                 style={{
                                     width: 100 + "%", 
                                     height: "auto",
+                                    // display: index === activeIndex ? "block" : "none",
                                 }}
                                 alt={text}
                                 />
