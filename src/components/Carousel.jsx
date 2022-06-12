@@ -60,6 +60,30 @@ const Carousel = (props) => {
                    })}
             </div>
 
+            {/* return(
+        <>
+            <div div className="o-carousel outer">
+                   {carouselImages.map(({ image, text }, index) => { 
+                       return (
+                           <div 
+                           className="o-carousel--item inner" 
+                           key={index} 
+                        //    style={{transform: `translateX(-${activeIndex * 100}%)`}}
+                           >
+                                <img 
+                                src={carouselImages[activeIndex].image}
+                                style={{
+                                    width: 100 + "%", 
+                                    height: "auto",
+                                }}
+                                alt={text}
+                                />
+                            </div>
+                        );  
+                   })}
+            </div> */}
+
+
              <div className="o-carousel--caption row">
                     {/* will display image text without having to loop*/}
                     {/* <div className="o-carousel--caption-text column text">
