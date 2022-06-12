@@ -53,28 +53,20 @@ const Carousel = (props) => {
                    })}
             </div>
 
-            <div className="row">
-                <div className="o-carousel--caption column">
+                 <div className="o-carousel--caption row">
                     {/* will display image text */}
-                    {carouselImages.map(( image, index) => {
-                        const displayText = index === activeIndex ? image.text : "";
-                        return (
-                            <div className="carousel--caption-text text" key={index}>
-                                { displayText }
-                            </div>
-                        )
-                    })}
-                    {/* <div className="o-carousel--caption-text column text">
-                            {carouselImages[activeIndex].text}
-                    </div> */}
-                    
+                    <div className="o-carousel--caption-text column text">
+                        {carouselImages[activeIndex].text}
+                    </div>
+                
                     {/* will display image number */}
                     <div className="carousel--caption-pagenumber column text">
                         {`${activeIndex + 1} / ${carouselImages.length}`}
                         <Buttons updateIndex={updateIndex} activeIndex={activeIndex} /> 
                     </div>
+                   
+   
                 </div>
-            </div>
         </>
     )
 }
