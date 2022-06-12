@@ -38,9 +38,13 @@ const Carousel = (props) => {
             <div div className="o-carousel outer">
                    {carouselImages.map(({ image, text }, index) => { 
                        return (
-                           <div className="o-carousel--item inner" key={index} style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                           <div 
+                           className="o-carousel--item inner" 
+                           key={index} 
+                        //    style={{transform: `translateX(-${activeIndex * 100}%)`}}
+                           >
                                 <img 
-                                src={image}
+                                src={carouselImages[activeIndex].image}
                                 style={{
                                     width: 100 + "%", 
                                     height: "auto",
@@ -61,7 +65,7 @@ const Carousel = (props) => {
                     {/* will display image number */}
                     <div className="carousel--caption-pagenumber column text">
                         {`${activeIndex + 1} / ${carouselImages.length}`}
-                        <Buttons updateIndex={updateIndex} activeIndex={activeIndex} /> 
+                        <Buttons updateIndex={updateIndex} activeIndex={activeIndex} carouselImages={carouselImages} /> 
                     </div>
                    
    
