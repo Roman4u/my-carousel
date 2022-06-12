@@ -37,8 +37,10 @@ const Carousel = (props) => {
         <>
             <div div className="o-carousel outer">
                    {carouselImages.map(({ image, text }, index) => { 
+                    //    const displayText = index === activeIndex ? text : "";
                        return (
-                           <div className="o-carousel--item inner" key={index} style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                           <>
+                           <p className="o-carousel--item inner" key={index} style={{transform: `translateX(-${activeIndex * 100}%)`}}>
                                 <img 
                                 src={image}
                                 style={{
@@ -48,16 +50,35 @@ const Carousel = (props) => {
                                 }}
                                 alt={text}
                                 />
-                            </div>
+                                {/* { displayText } */}
+                            </p>
+                            </>
                         );  
                    })}
             </div>
 
-                 <div className="o-carousel--caption row">
-                    {/* will display image text */}
-                    <div className="o-carousel--caption-text column text">
+             <div className="o-carousel--caption row">
+                    {/* will display image text without having to loop*/}
+                    {/* <div className="o-carousel--caption-text column text">
                         {carouselImages[activeIndex].text}
-                    </div>
+                    </div> */}
+
+                {carouselImages.map(({ text }, index) => { 
+                    const displayText = index === activeIndex ? text : "";
+                    return (
+                            <p
+                            className="o-carousel--caption-text column" key={index} 
+                            style={{
+                                display: index === activeIndex ? "block" : "none",
+                            }}
+                            >
+                                { displayText }
+                            </p>
+    
+                    );  
+                })}
+                
+
                 
                     {/* will display image number */}
                     <div className="carousel--caption-pagenumber column text">
@@ -66,7 +87,7 @@ const Carousel = (props) => {
                     </div>
                    
    
-                </div>
+            </div>
         </>
     )
 }

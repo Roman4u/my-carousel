@@ -82,11 +82,14 @@
 
 .carousel--caption-text {
     display: flex;
-    text-align: left;
+    /* text-align: left; */
+    justify-content: left;
 }
 
 .o-carousel--caption {
-    justify-content: left;
+    /* display: flex;  */
+    /* justify-content: left; */
+    text-align: left;
 }
 
 .carousel--caption-pagenumber {
@@ -99,6 +102,6 @@
 }
 
 .indicators > button {
-    display: flex;
+    /* display: flex; */
     margin: 5px;
 }
