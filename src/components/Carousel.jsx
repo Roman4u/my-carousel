@@ -40,7 +40,10 @@ const Carousel = (props) => {
                     //    const displayText = index === activeIndex ? text : "";
                        return (
                            <>
-                           <p className="o-carousel--item inner" key={index} style={{transform: `translateX(-${activeIndex * 100}%)`}}>
+                           <p className="o-carousel--item inner" 
+                           key={index} 
+                           style={{transform: `translateX(-${activeIndex * 100}%)`}}
+                           >
                                 <img 
                                 src={image}
                                 style={{
