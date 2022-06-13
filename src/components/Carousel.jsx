@@ -7,17 +7,17 @@ const Carousel = (props) => {
     const { carouselImages, transitionTime, activeIndex, setActiveIndex } = props;
 
     // automatically switches images upon loading
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         updateIndex(activeIndex + 1);
-    //     }, transitionTime);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            updateIndex(activeIndex + 1);
+        }, transitionTime);
 
-    //     return () => {
-    //         if(interval){
-    //             clearInterval(interval);
-    //         }
-    //     };
-    // });
+        return () => {
+            if(interval){
+                clearInterval(interval);
+            }
+        };
+    });
 
     // updates the value of activeIndex upon a button press
     const updateIndex = (newIndex) => {
@@ -35,15 +35,16 @@ const Carousel = (props) => {
 
     return(
         <>
-            <div div className="o-carousel outer">
+            <div div className="outer">
                    {carouselImages.map(({ image, text }, index) => { 
                     //    const displayText = index === activeIndex ? text : "";
                        return (
                            <>
-                           <p className="o-carousel--item inner" 
+                           <div className="o-carousel--item inner" 
                             key={index} 
                            style={{
-                               transform: `translateX(-${activeIndex * 100}%)`,
+                            //    transform: `translateX(-${activeIndex * 100}%)`,
+                            display: index === activeIndex ? "block" : "none",
                             }}
                            >
                                 <img 
@@ -51,15 +52,16 @@ const Carousel = (props) => {
                                 style={{
                                     width: 100 + "%", 
                                     height: "auto",
-                                    display: index === activeIndex ? "block" : "none",
+                                    // display: index === activeIndex ? "block" : "none",
                                 }}
                                 alt={text}
                                 />
                                 {/* { displayText } */}
-                            </p>
+                            </div>
                             </>
                         );  
                    })}
+
             </div>
 
 
