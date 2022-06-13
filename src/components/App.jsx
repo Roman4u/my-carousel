@@ -10,12 +10,12 @@ const App = () => {
 
     const images = [ 
         {
-            image: "https://i.imgur.com/9TgoRWD.jpg",
-            text: "Spacious offices with clean design",
-        }, 
-        {
             image: "https://i.imgur.com/ujZRv5G.jpg",
             text: "Rooms for storage"
+        }, 
+        {
+            image: "https://i.imgur.com/9TgoRWD.jpg",
+            text: "Spacious offices with clean design",
         }, 
         {
             image: "https://i.imgur.com/dWH1QiY.jpg",
@@ -43,7 +43,7 @@ const App = () => {
 
     return (
         <>
-            <div className="carousel-wrapper">
+            <div className="carousel-wrapper o-carousel">
                 <div className="row">
                     <div className="column">
                         <div className="text-column">
