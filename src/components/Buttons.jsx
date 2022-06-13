@@ -5,7 +5,6 @@ const Buttons = (props) => {
     const { updateIndex, activeIndex, carouselImages } = props;
 
     const prevSlide = () => {
-        //console.log(carouselImages[activeIndex])
         updateIndex(activeIndex === 0 ? carouselImages.length - 1 : activeIndex - 1);
     };
 
