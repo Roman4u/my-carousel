@@ -44,7 +44,6 @@
 }
 
 .o-carousel--thumbnail {
-    /* display: inline-flex; */
     align-items: center;
     justify-content: center;
     height: 100px;
@@ -82,13 +81,10 @@
 
 .carousel--caption-text {
     display: flex;
-    /* text-align: left; */
     justify-content: left;
 }
 
 .o-carousel--caption {
-    /* display: flex;  */
-    /* justify-content: left; */
     text-align: left;
 }
 
@@ -102,6 +98,5 @@
 }
 
 .indicators > button {
-    /* display: flex; */
     margin: 5px;
 }
